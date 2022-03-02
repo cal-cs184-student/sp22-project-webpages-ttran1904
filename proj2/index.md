@@ -1,5 +1,7 @@
 # Project 2: Mesh edit
 
+Note: Please try to see the images in my web-page repo. My website is not loading images and I even tried to convert straight from Markdown to png, but it won't work.
+
 ## Section I: Bezier Curves and Surfaces
 ### Part 1: Bezier Curves with 1D de Casteljau Subdivision
 
@@ -81,3 +83,5 @@ Again, one of my fatal flaw was messing up the names of the half-edges I assigne
 Loop subdivision is a form of upsampling. It will divide each shape/triangle of the object into severall smaller shapes/triangles.
 
 
+![Before Combo](/img-2/up-before.png?raw=true)
+![After Combo](/img-2/up-after.png?raw=true)
