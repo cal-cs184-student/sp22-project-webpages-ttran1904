@@ -11,15 +11,15 @@ de Casteljau's algorithm is a recursive method that compute the polynomials in t
 *   Repeat until only have 1 curve left and split it with 1 final point `b_0`.
 
 In the total curves, the first, last and `b_0` point will make up the final linearly interped curve. Shown here as example image from lecture:
-![de Casteljau algo](/img-2/dcj.png?raw=true)
+![de Casteljau algo](/img-2/dcj.png)
 
 Screenshots of each step / level of the evaluation from the original control points down to the final evaluated point:
-![B1](/img-2/b1.png?raw=true)
-![B2](/img-2/b2.png?raw=true)
-![B3](/img-2/b3.png?raw=true)
-![B4](/img-2/b4.png?raw=true)
-![B5](/img-2/b5.png?raw=true)
-![B6](/img-2/b6.png?raw=true)
+![B1](/img-2/b1.png)
+![B2](/img-2/b2.png)
+![B3](/img-2/b3.png)
+![B4](/img-2/b4.png)
+![B5](/img-2/b5.png)
+![B6](/img-2/b6.png)
 
 Screenshot of a slightly different Bezier curve by moving the original control points around and modifying the parameter `t` via mouse scrolling:
 
@@ -80,8 +80,7 @@ Again, one of my fatal flaw was messing up the names of the half-edges I assigne
 
 
 ### Part 6: Loop Subdivision for Mesh Upsampling
-Loop subdivision is a form of upsampling. It will divide each shape/triangle of the object into severall smaller shapes/triangles.
-
+Loop subdivision is a form of upsampling. It will divide each shape/triangle of the object into severall smaller shapes/triangles. I weight the vertices with the number on the lecture slides.
 
 ![Before Combo](/img-2/up-before.png?raw=true)
 ![After Combo](/img-2/up-after.png?raw=true)
