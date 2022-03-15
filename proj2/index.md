@@ -11,15 +11,15 @@ de Casteljau's algorithm is a recursive method that compute the polynomials in t
 *   Repeat until only have 1 curve left and split it with 1 final point `b_0`.
 
 In the total curves, the first, last and `b_0` point will make up the final linearly interped curve. Shown here as example image from lecture:
-![de Casteljau algo](/img-2/dcj.png)
+![de Casteljau algo](../img-2/dcj.png)
 
 Screenshots of each step / level of the evaluation from the original control points down to the final evaluated point:
-![B1](/img-2/b1.png)
-![B2](/img-2/b2.png)
-![B3](/img-2/b3.png)
-![B4](/img-2/b4.png)
-![B5](/img-2/b5.png)
-![B6](/img-2/b6.png)
+![B1](../img-2/b1.png)
+![B2](../img-2/b2.png)
+![B3](../img-2/b3.png)
+![B4](../img-2/b4.png)
+![B5](../img-2/b5.png)
+![B6](../img-2/b6.png)
 
 Screenshot of a slightly different Bezier curve by moving the original control points around and modifying the parameter `t` via mouse scrolling:
 
