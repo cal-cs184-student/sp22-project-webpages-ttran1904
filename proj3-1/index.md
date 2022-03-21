@@ -1,6 +1,7 @@
 # Project 3 Part 1
 
 Note: Image can't load well on print. Please go to my webpage to view images.
+If the webpage images can't load (sometimes Github.io webpages takes a long time to load images up), please look at the images in the source code (`/img-3/` folder)
 
 ## Part 1: Ray Generation and Scene Intersection
 ### I. Ray generation
