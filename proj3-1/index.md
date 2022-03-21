@@ -1,5 +1,7 @@
 # Project 3 Part 1
 
+Note: Image can't load well on print. Please go to my webpage to view images.
+
 ## Part 1: Ray Generation and Scene Intersection
 ### I. Ray generation
 A ray equation is `r = o + dt` where `o` is the origin vector and `d` is the ray's direction vector. 
