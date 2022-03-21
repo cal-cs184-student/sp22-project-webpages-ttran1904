@@ -24,18 +24,18 @@ Screenshots of each step / level of the evaluation from the original control poi
 Screenshot of a slightly different Bezier curve by moving the original control points around and modifying the parameter `t` via mouse scrolling:
 
 Same final curve with much lower `t` value:
-![Lower t value](/img-2/low-t-val.png?raw=true)
+![Lower t value](/img-2/low-t-val.png)
 
 Final curve with 1 control point moved to the far right, which shifts the final curve:
-![Shift 1 control point](/img-2/move-pt.png?raw=true)
+![Shift 1 control point](/img-2/move-pt.png)
 
 
 ### Part 2: Bezier Surfaces with Separable 1D de Casteljau
 de Casteljau algorithm can extend to Bezier surfaces. A 3D surface is defined by 2 vectors `(u,v)`, while 2D line just uses `t`. A Bezier surface has 3D control points. We can think of the Bezier surface as infinitely many Bezier curves one next to another. First, we interpolate `u` on all of those Bezier curves. After getting the final point of those curves, we can use `v` to get the whole Bezier surface.
 
 Screenshot of `bez/teapot.bez`:
-![Teapot 1](/img-2/teapot1.png?raw=true)
-![Teapot 2](/img-2/teapot2.png?raw=true)
+![Teapot 1](/img-2/teapot1.png)
+![Teapot 2](/img-2/teapot2.png)
 
 
 ## Section II: Triangle Meshes and Half-Edge Data Structure
@@ -48,7 +48,7 @@ My implementation of normal:
 *   Move to its twin's next half-edge (we are looking at a new face now)
 *   Repeat above steps, until we examine all faces of the mesh and get back to the original half-edge.
 *   Finally, return normalized vector 
-![Teapot Shade](/img-2/teapot-shaded.png?raw=true)
+![Teapot Shade](/img-2/teapot-shaded.png)
 
 
 ### Part 4: Edge Flip
@@ -59,8 +59,8 @@ I follow the exact instruction:
 
 For debugging, I made a typo in the edge name, `bc` but instead I typed `cb` :( . So the program runs through the wrong face and mess up the image a bit. I had to fix that.
 
-![Before Flip](/img-2/flip-0.png?raw=true)
-![After Flip](/img-2/flip-1.png?raw=true)
+![Before Flip](/img-2/flip-0.png)
+![After Flip](/img-2/flip-1.png)
 
 
 
@@ -68,13 +68,13 @@ For debugging, I made a typo in the edge name, `bc` but instead I typed `cb` :( 
 Same as part 4, I draw 2 diagrams of the 2 triangles given. Add a new vertex to the midpoint of the original edge. Assign/re-assign so many elements to finally get 8 half-edges after adding the middle vertex.
 
 Screenshots of a mesh before and after some edge splits:
-![Before Split](/img-2/before-split.png?raw=true)
-![After Split](/img-2/after-split.png?raw=true)
+![Before Split](/img-2/before-split.png)
+![After Split](/img-2/after-split.png)
 
 
 Screenshots of a mesh before and after a combination of both edge splits and edge flips:
-![Before Combo](/img-2/combo-before.png?raw=true)
-![After Combo](/img-2/combo-after.png?raw=true)
+![Before Combo](/img-2/combo-before.png)
+![After Combo](/img-2/combo-after.png)
 
 Again, one of my fatal flaw was messing up the names of the half-edges I assigned in my code. I name the half-edges according to their start-end direction (i.e. `bc` or `cb`), and got mixed up some names in my own naming convention. So debugging was painful, even though it was a typo :(
 
@@ -82,5 +82,5 @@ Again, one of my fatal flaw was messing up the names of the half-edges I assigne
 ### Part 6: Loop Subdivision for Mesh Upsampling
 Loop subdivision is a form of upsampling. It will divide each shape/triangle of the object into severall smaller shapes/triangles. I weight the vertices with the number on the lecture slides.
 
-![Before Combo](/img-2/up-before.png?raw=true)
-![After Combo](/img-2/up-after.png?raw=true)
+![Before Combo](/img-2/up-before.png)
+![After Combo](/img-2/up-after.png)

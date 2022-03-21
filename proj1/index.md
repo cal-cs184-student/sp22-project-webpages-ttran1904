@@ -20,7 +20,7 @@ That is because for each point, if it fails 1 line test, then the program will i
 point and continue to test the next point. Therefore, it will save a lot of time instead of 
 checking all 3 points at once.
 
-![SVG6](/img/task1-svg4.png?raw=true)
+![SVG6](/img/task1-svg4.png)
 
 I optimized it with bounding box for each triangle. The time (clock() unit time miliseconds):
 * No bounding box: 1997983
@@ -45,9 +45,9 @@ Other utilities functions accordingly modified:
 
 For `basic/test4.svg`, the images are:
 
-![SVG6](/img/task2-svg4-01.png?raw=true)
-![SVG6](/img/task2-svg4-04.png?raw=true)
-![SVG6](/img/task2-svg4-16.png?raw=true)
+![SVG6](/img/task2-svg4-01.png)
+![SVG6](/img/task2-svg4-04.png)
+![SVG6](/img/task2-svg4-16.png)
 
 Based on the pixel inspector, sample rate 1 just gives a 0 or 1 value of the pink pixel if the center is within that skinny triangle. However, increasing sample rate to 4 will divide the pixel into 4 smaller sub-pixels that can average out the more accurate likelihood values of the pixels. Further increasing to 16 will make the picture more accurate and less white pixels that are not supposed to cut that continuous triangle.
 
@@ -56,7 +56,7 @@ Based on the pixel inspector, sample rate 1 just gives a 0 or 1 value of the pin
 I modified my cubeman so that he is raising his whole left arm up (waving) and bending his right elbow slightly. It looks like he is trying to say hello.
 
 
-![robot](/img/my_robot.png?raw=true)
+![robot](/img/my_robot.png)
 
 
 ## Task 4
@@ -64,11 +64,11 @@ Barycentric coordinates is an alternative way to describe the points in a shape 
 
 Let `α, β, γ` be distances from vertex A, B, and C of the triangle, such that `α + β + γ = 1`. A point `V` inside the triangle is defined as `V = αV_A + βV_B + γV_C`.
 
-![barycentric](/img/barycentric.png?raw=true)
+![barycentric](/img/barycentric.png)
 
 The color wheel:
 
-![colorwheel](/img/colorwheel.png?raw=true)
+![colorwheel](/img/colorwheel.png)
 
 
 ## Task 5
@@ -77,12 +77,12 @@ Pixel sampling is using a barycentric coordinate to sample a point's color in ev
 One way to implement this is to use **nearest sampling**, choosing 1 texture coordinate closest to that point (barycentric-wise). Another way to implement is to use **bilinear filtering**, choosing 4 closest barycentric points and linearly interpolating them to get the final value. The second method will give a smoother texture in the final image, because it relies on multiple points to basically "average"/interpolate out.
 
 With nearest sampling:
-![nearest sampling- sr 1](/img/n-1.png?raw=true)
-![nearest sampling- sr 16](/img/n-16.png?raw=true)
+![nearest sampling- sr 1](/img/n-1.png)
+![nearest sampling- sr 16](/img/n-16.png)
 
 With bilinear sampling
-![bilinear sampling- sr 1](/img/bi-1.png?raw=true)
-![bilinear sampling- sr 16](/img/bi-16.png?raw=true)
+![bilinear sampling- sr 1](/img/bi-1.png)
+![bilinear sampling- sr 16](/img/bi-16.png)
 
 For nearest samples generally have more aliasing error for lower sampling rate, such as 1. This is because when the coordinate are far, the nearest filter will be less accurate.
 

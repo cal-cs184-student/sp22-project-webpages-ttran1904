@@ -151,3 +151,5 @@ The algorithm will look at each pixel and take some n samples to get the mean an
 
 **Pick one scene and render it with at least 2048 samples per pixel. Show a good sampling rate image with clearly visible differences in sampling rate over various regions and pixels. Include both your sample rate image, which shows your how your adaptive sampling changes depending on which part of the image you are rendering, and your noise-free rendered result. Use 1 sample per light and at least 5 for max ray depth.**
 
+![Bunny Adaptive Sampling](/img-3/bunny.png)
+![Bunny Adaptive Sampling Rate](/img-3/bunny_rate.png)
