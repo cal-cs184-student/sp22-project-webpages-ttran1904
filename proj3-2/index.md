@@ -31,10 +31,43 @@ Images above are ordered based on maximum ray depth: (64 samples per pixel and 4
 *   `4, 5, 100`: starting to have almost identical results after 4 maximum ray depth. Right sphere was optimal at 3 bounces max and now it has become slightly noisier. Progressively through the images, the refracted spot under the right sphere gets a tiny bit stronger. In addition, there is a bright shadow on the rightsphere surface, where it is close to the refracted spot. This is probability due to more max ray allowed increase the brightness of the sphere surface where will refract before hitting the ground.
 
 
+## Part 3
+**In a few sentences, explain the ideas behind environment lighting (i.e. why we do it/how it works).**
+Environment lighting represents source that is "infinitely" far away, such as in the real-world where we have light source that are much further from the object then the light source in the enclosed room/box that we see in the previous part. How it works is that the light from each direction is defined by a texture map parameterized by phi and theta.
+
+![Environment Light](/img-3.2/envirolight.png)
+Environment light example figure from the project spec
+
+I am using the Ennis background, shown below:
+
+![Ennis Background](/img-3.2/ennis.png)
+
+**Show the `probability_debug.png` file for the .exr file you are using, generated using the save_probability_debug() helper function after initializing your probability distributions.**
+
+![probability_debug.png file](/img-3.2/probability_debug.png)
+
+
+
+**Use the `bunny_unlit.dae` scene and your environment map `.exr` file and render two pictures, one with uniform sampling and one with importance sampling. Use 4 samples per pixel and 64 samples per light in each. Compare noise levels.**
+
+With Importance sampling:
+
+![bunny_unlit - Importance sampling](/img-3.2/bunny_grace.png)
+
+With cosine sampling (from staff/provided skeleton code)
+
+![bunny_unlit - Cosine Sampling]()
+
+
+
+**Use a different image (if you did part 2, we recommend `bunny_microfacet_cu_unlit.dae`) and your environment map `.exr` file and render two pictures, one with uniform sampling and one with importance sampling. Use 4 samples per pixel and 64 samples per light in each. Compare noise levels.**
+
+I did Part 2, so I will use the recommended file `bunny_microfacet_cu_unlit.dae` with the environment map `uffizi.exr`
+
+`uffizi.exr` Image:
 
 
 
 
-
-## Part 2
-**Show a sequence of 4 images of scene CBdragon_microfacet_au.dae rendered with `α` set to 0.005, 0.05, 0.25 and 0.5. Describe the differences between different images.**
+<!-- ## Part 2
+**Show a sequence of 4 images of scene CBdragon_microfacet_au.dae rendered with `α` set to 0.005, 0.05, 0.25 and 0.5. Describe the differences between different images.** -->
