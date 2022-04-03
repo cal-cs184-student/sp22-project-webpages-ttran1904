@@ -38,9 +38,9 @@ Environment lighting represents source that is "infinitely" far away, such as in
 ![Environment Light](/img-3.2/envirolight.png)
 Environment light example figure from the project spec
 
-I am using the Ennis background, shown below:
+I am using the Field background, shown below:
 
-![Ennis Background](/img-3.2/ennis.png)
+![Grace Background](/img-3.2/field.png)
 
 **Show the `probability_debug.png` file for the .exr file you are using, generated using the save_probability_debug() helper function after initializing your probability distributions.**
 
@@ -50,22 +50,30 @@ I am using the Ennis background, shown below:
 
 **Use the `bunny_unlit.dae` scene and your environment map `.exr` file and render two pictures, one with uniform sampling and one with importance sampling. Use 4 samples per pixel and 64 samples per light in each. Compare noise levels.**
 
+With Uniform sampling (from staff/provided skeleton code)
+
+![bunny_unlit - Uniform Sampling](/img-3.2/bunny_unlit_hemisphere.png)
+
 With Importance sampling:
 
-![bunny_unlit - Importance sampling](/img-3.2/bunny_grace.png)
-
-With cosine sampling (from staff/provided skeleton code)
-
-![bunny_unlit - Cosine Sampling]()
-
+![bunny_unlit - Importance sampling](/img-3.2/bunny_unlit_importance.png)
 
 
 **Use a different image (if you did part 2, we recommend `bunny_microfacet_cu_unlit.dae`) and your environment map `.exr` file and render two pictures, one with uniform sampling and one with importance sampling. Use 4 samples per pixel and 64 samples per light in each. Compare noise levels.**
 
-I did Part 2, so I will use the recommended file `bunny_microfacet_cu_unlit.dae` with the environment map `uffizi.exr`
+I did Part 2 (but only want to get graded on Part 1. The code works), so I will use the recommended file `bunny_microfacet_cu_unlit.dae` with the environment map `uffizi.exr`.
 
 `uffizi.exr` Image:
+![Uffizi background](/img-3.2/uffizi.jpg)
 
+Using `-l 256 -s 4 -t 8 -m 7`:
+*   With Uniform Sampling:
+
+![cu_bunny with uniform sampling](/img-3.2/cu_bunny_uniform.png)
+
+*   With Importance Sampling:
+
+![cu_bunny with importance sampling](/img-3.2/cu_bunny_importance.png)
 
 
 
