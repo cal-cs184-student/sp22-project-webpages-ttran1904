@@ -58,13 +58,12 @@ With Importance sampling:
 
 ![bunny_unlit - Importance sampling](/img-3.2/bunny_unlit_importance.png)
 
+Importance sampling has a clearer image. It has more noise or freckles on the bunny, as seen obviously on the lighter areas of the uniform sampling image.
+
 
 **Use a different image (if you did part 2, we recommend `bunny_microfacet_cu_unlit.dae`) and your environment map `.exr` file and render two pictures, one with uniform sampling and one with importance sampling. Use 4 samples per pixel and 64 samples per light in each. Compare noise levels.**
 
-I did Part 2 (but only want to get graded on Part 1. The code works), so I will use the recommended file `bunny_microfacet_cu_unlit.dae` with the environment map `uffizi.exr`.
-
-`uffizi.exr` Image:
-![Uffizi background](/img-3.2/uffizi.jpg)
+I did Part 2 (but only want to get graded on Part 1. The code works), so I will use the recommended file `bunny_microfacet_cu_unlit.dae`.
 
 Using `-l 256 -s 4 -t 8 -m 7`:
 *   With Uniform Sampling:
@@ -74,6 +73,8 @@ Using `-l 256 -s 4 -t 8 -m 7`:
 *   With Importance Sampling:
 
 ![cu_bunny with importance sampling](/img-3.2/cu_bunny_importance.png)
+
+The importance sampling is less noisy. It has clearer image of the lobe of the right ear, tail, and front paw of the bunny.
 
 
 
