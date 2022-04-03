@@ -1,0 +1,40 @@
+# Project 3-2
+
+## Part 1: Mirror and Glass Materials
+**Show a sequence of six images of scene `CBspheres.dae` rendered with `max_ray_depth` set to 0, 1, 2, 3, 4, 5, and 100.**
+![Spheres - max ray depth 0](/img-3.2/spheres_0.png)
+Ray depth 0
+![Spheres - max ray depth 1](/img-3.2/spheres_1.png)
+Ray depth 1
+![Spheres - max ray depth 2](/img-3.2/spheres_2.png)
+Ray depth 2
+![Spheres - max ray depth 3](/img-3.2/spheres_3.png)
+Ray depth 3
+![Spheres - max ray depth 4](/img-3.2/spheres_4.png)
+Ray depth 4
+![Spheres - max ray depth 5](/img-3.2/spheres_5.png)
+Ray depth 5
+![Spheres - max ray depth 100](/img-3.2/spheres_100.png)
+Ray depth 100
+
+**Point out the new multibounce effects that appear in each image** 
+
+also explains the question:
+
+**Explain how these bounce numbers relate to the particular effects that appear.**
+
+Images above are ordered based on maximum ray depth: (64 samples per pixel and 4 samples per light)
+*   `0`: No object has received light on its surface. Therefore, pitch black except for the light source.
+*   `1`: Only has 1 bounce (i.e. direct illumination). On the mirror/glass spheres, I can only see image of the light source, because it is the only thing that has a direct 1 bounce (so the walls are not included.) Also, the ceiling wall is black (except for the white light source) because it hasn't receive 2 bounce from other objects below it.
+*   `2`: Now I can see diffusive objects on the mirror/glass spheres. Closely observe the left sphere, it has the reflection of the right sphere, but it's black! That's because image of the right sphere only contain up to 2 bounces (light -> right sphere -> left sphere) and has no more room for other diffusive objects that has `> 2` bounces. On the other hand, we can see that the left sphere (as appear on the right sphere) is a bit fuzzy/noisy. This is because rays from diffusive objects -> right sphere -> left sphere makes it noiser.
+*   `3`: Both the left and right spheres have a more accurate reflection represetation of the other spheres (less noisy, much clearer, etc.) In the shadow of the right sphere, we can see the bright reflexive spot refracted from the right source through the right sphere to arrive on the ground. We can also see the red and blue walls mixing with other white walls in this new image.
+*   `4, 5, 100`: starting to have almost identical results after 4 maximum ray depth. Right sphere was optimal at 3 bounces max and now it has become slightly noisier. Progressively through the images, the refracted spot under the right sphere gets a tiny bit stronger. In addition, there is a bright shadow on the rightsphere surface, where it is close to the refracted spot. This is probability due to more max ray allowed increase the brightness of the sphere surface where will refract before hitting the ground.
+
+
+
+
+
+
+
+## Part 2
+**Show a sequence of 4 images of scene CBdragon_microfacet_au.dae rendered with `α` set to 0.005, 0.05, 0.25 and 0.5. Describe the differences between different images.**
