@@ -5,9 +5,9 @@
 **Take some screenshots of scene/pinned2.json from a viewing angle where you can clearly see the cloth wireframe to show the structure of your point masses and springs.**
 
 Overall picture:
-![Overall scene/pinned2.json picture](../img-4/1-full.png)
+<!-- ![Overall scene/pinned2.json picture](../img-4/1-full.png) -->
 
-<img src="../img-4/1-full.png" width="100" height="100">
+<img src="../img-4/1-full.png" width="200" height="200">
 
 Zoomed in picture:
 ![Zoomed in picture of scene/pinned2.json](../img-4/1-close.png)
