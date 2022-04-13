@@ -173,8 +173,8 @@ Mirror shaded over just cloth:
 ![Cloth mirror shaded](/img-4/mirror-cloth.png)
 
 Mirror shaded over just sphere:
-![Sphere mirror shaded](/img-4/mirror-sphere.png)
+![Sphere mirror shaded](./img-4/mirror-sphere.png)
 
 Mirror shaded over clother draped over sphere:
-![Cloth and sphere mirror shaded](/img-4/mirror-clothsphere.png)
+![Cloth and sphere mirror shaded](./img-4/mirror-clothsphere.png)
 
