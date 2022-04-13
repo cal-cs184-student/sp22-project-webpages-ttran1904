@@ -7,6 +7,8 @@
 Overall picture:
 ![Overall scene/pinned2.json picture](../img-4/1-full.png)
 
+<!-- <img src="../img-4/1-full.png" width="100" height="100"> -->
+
 Zoomed in picture:
 ![Zoomed in picture of scene/pinned2.json](../img-4/1-close.png)
 
