@@ -1,7 +1,5 @@
 # Project 4: Cloth Sim
 
-NOTE: Please try to look at the `/img-4/` folder on my github webpages repo. It contains all the necessary files. I permenantly have a problem with my webpage repo on loading image on the server, and I have tried many ways (Markdown, HTML, changing configurations, etc.) over all the previous project and didn't work. Please take a look at my /img-4/ folder or git clone the webpage repo to see on Markdown preview on VS Code. Thank you!
-
 
 ## Part 1: Masses and springs
 **Take some screenshots of scene/pinned2.json from a viewing angle where you can clearly see the cloth wireframe to show the structure of your point masses and springs.**
@@ -90,38 +88,38 @@ If viewing the above picture isn't easy enough to determine if it's right on the
 **Show us at least 3 screenshots that document how your cloth falls and folds on itself, starting with an early, initial self-collision and ending with the cloth at a more restful state (even if it is still slightly bouncy on the ground).**
 
 Before cloth falls:
-![Before fall](/img-4/self-fold-1.png)
+![Before fall](../img-4/self-fold-1.png)
 
 Starting to fall. Cloth folds onto itself more at the bottom:
-![Alittle self-fold at the bottom](/img-4/self-fold-2.png)
+![Alittle self-fold at the bottom](../img-4/self-fold-2.png)
 
 Folds more onto itself and spread a bit on the ground as more cloth falls:
-![More self-fold and spread out onto the ground](/img-4/self-fold-3.png)
+![More self-fold and spread out onto the ground](../img-4/self-fold-3.png)
 
 Entire cloth fall on the ground. You can see that the wavy self-fold at the edge of the cloth:
-![Before fall](/img-4/self-fold-4.png)
+![Before fall](../img-4/self-fold-4.png)
 
 At resting state, the previous cloth slowly spread out more to cover the ground due to gravity: (rest state is still a bit wavy, but it is spread out more than with low density)
-![Before fall](/img-4/self-fold-5.png)
+![Before fall](../img-4/self-fold-5.png)
 
 
 At resting state. The other side of the cloth. Also see the self-fold.
-![Before fall](/img-4/self-fold-6.png)
+![Before fall](../img-4/self-fold-6.png)
 
 
 **Vary the density as well as ks and describe with words and screenshots how they affect the behavior of the cloth as it falls on itself.**
 
 Low `density = 5`. The cloth is more folded onto itself and spreads out on the ground less:
-![Low density=5 self-fold](/img-4/self-fold-low-density.png)
+![Low density=5 self-fold](../img-4/self-fold-low-density.png)
 
 High `density = 500`. The cloth is less folded onto itself and spreads out on the ground more, as gravity pulls it down more due to its high density:
-![High density=500 self-fold](/img-4/self-fold-high-density.png)
+![High density=500 self-fold](../img-4/self-fold-high-density.png)
 
 Low `ks = 500`. The cloth has more rumpy, scuffle parts. It folds and creases over itself more.
-![Low ks=500 self-fold](/img-4/self-fold-low-ks.png)
+![Low ks=500 self-fold](../img-4/self-fold-low-ks.png)
 
 High `ks = 50000`. The cloth is MUCH smoother (like silk). It spreads out more and has less mini-folds/rumpy parts on the material.
-![High ks=500000 self-fold](/img-4/self-fold-high-ks.png)
+![High ks=500000 self-fold](../img-4/self-fold-high-ks.png)
 
 
 
