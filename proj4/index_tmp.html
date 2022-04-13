@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>index.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="project-4-cloth-sim">Project 4: Cloth Sim</h1>
+<h2 id="part-1-masses-and-springs">Part 1: Masses and springs</h2>
+<p><strong>Take some screenshots of scene/pinned2.json from a viewing angle where you can clearly see the cloth wireframe to show the structure of your point masses and springs.</strong></p>
+<p>Overall picture:</p>
+<!-- ![Overall scene/pinned2.json picture](../img-4/1-full.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/1-full.png" width="300" height="300">
+<p>Zoomed in picture:</p>
+<!-- ![Zoomed in picture of scene/pinned2.json](../img-4/1-close.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/1-close.png" width="300" height="300">
+<p><strong>Show us what the wireframe looks like (1) without any shearing constraints, (2) with only shearing constraints, and (3) with all constraints.</strong></p>
+<ul>
+<li>(1) Without any shearing</li>
+</ul>
+<!-- ![Without any shearing](../img-4/1-no-shear.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/1-no-shear.png" width="300" height="300">
+<ul>
+<li>(2) With only shearing constraints</li>
+</ul>
+<!-- ![Only shearing constraint](../img-4/1-only-shear.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/1-only-shear.png" width="300" height="300">
+<ul>
+<li>(3) With all constraints:</li>
+</ul>
+<!-- ![With all constraints (structural, shearing, and bending))](../img-4/1-full.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/1-full.png" width="300" height="300">
+<h1 id="part-2-simulation-via-numerical-integration">Part 2: Simulation via numerical integration</h1>
+<p><strong>Experiment with some the parameters in the simulation. To do so, pause the simulation at the start with <code>P</code>, modify the values of interest, and then resume by pressing <code>P</code> again. You can also restart the simulation at any time from the cloth's starting position by pressing <code>R</code>.</strong></p>
+<ul>
+<li><strong>Describe the effects of changing the spring constant ks; how does the cloth behave from start to rest with a very low ks? A high ks?</strong></li>
+</ul>
+<p>The provided normal cloth has: <code>ks = 5000 N/m</code>, <code>density = 15 g/cm^2</code>, <code>damping = 0.200000%</code></p>
+<!-- ![Normal cloth](../img-4/normal-ks-5000.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/normal-ks-5000.png" width="300" height="300">
+<p>Now, changing the parameters to see the individual effect of each on the cloth:</p>
+<ol>
+<li>Low <code>ks = 10 N/m</code> has more sketchy cloth.</li>
+</ol>
+<!-- ![Low ks = 10](../img-4/low-ks-10.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/low-ks-10.png" width="300" height="300">
+<ol start="2">
+<li>High <code>ks = 100000 N/m</code> has less sketchy, in other words, stiffer cloth.</li>
+</ol>
+<!-- ![High ks = 100000](../img-4/high-ks-100000.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/high-ks-100000.png" width="300" height="300">
+<ol start="3">
+<li>Low <code>density = 5 g/cm^2</code> makes the cloth droops down less.</li>
+</ol>
+<!-- ![Low density cloth](../img-4/low-density.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/low-density.png" width="300" height="300">
+<ol start="4">
+<li>High <code>density = 50 g/cm^2</code> makes the cloth droops down more.</li>
+</ol>
+<!-- ![High density cloth](../img-4/high-density.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/high-density.png" width="300" height="300">
+<ol start="5">
+<li>Low <code>damping = 1.000000 %</code> makes the cloth swap less.</li>
+</ol>
+<!-- ![Low damping cloth](../img-4/low-damping.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/low-damping.png" width="300" height="300">
+<ol start="6">
+<li>High <code>damping = 0.000000 %</code> makes the cloth swap MUCH more (like there is a storm or something high wind).</li>
+</ol>
+<!-- ![High damping cloth](../img-4/high-damping.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/high-damping.png" width="300" height="300">
+<ul>
+<li><strong>Show us a screenshot of your shaded cloth from scene/pinned4.json in its final resting state! If you choose to use different parameters than the default ones, please list them.</strong></li>
+</ul>
+<p>Wire-framed pinned4.json:</p>
+<!-- ![Wireframed pinned4.json](../img-4/pinned4-wire.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/pinned4-wire.png" width="300" height="300">
+<p>Normal shaded pinned4.json:</p>
+<!-- ![Shaded pinned4.json](../img-4/pinned4-normal.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/pinned4-normal.png" width="300" height="300">
+<h2 id="part-3-handling-collisions-with-other-objects">Part 3: Handling collisions with other objects</h2>
+<p><strong>Show us screenshots of your shaded cloth from scene/sphere.json in its final resting state on the sphere using the default <code>ks = 5000</code> as well as with <code>ks = 500</code> and <code>ks = 50000</code>. Describe the differences in the results.</strong></p>
+<p>Default <code>ks = 5000</code> at final resting state (this is the basic &quot;drapness&quot; I will be comparing with other ks values):</p>
+<!-- ![Cloth drape over sphere, ks = 5000](../img-4/sphere-normal.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/sphere-normal.png" width="300" height="300">
+<p>Cloth draped on sphere with <code>ks = 500</code> has much more parts of the cloth that <strong>tightly hug</strong> the sphere than that of the <code>ks = 5000</code>.</p>
+<!-- ![Cloth drape over sphere, ks = 500](../img-4/sphere-ks-low.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/sphere-ks-low.png" width="300" height="300">
+<p>Cloth draped on sphere with <code>ks = 50000</code> has much more parts of the cloth that <strong>stiff out</strong>/does not bend with the sphere than that of the <code>ks = 5000</code>.</p>
+<!-- ![Cloth drape over sphere, ks = 500](../img-4/sphere-ks-high.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/sphere-ks-high.png" width="300" height="300">
+<p><strong>Show us a screenshot of your shaded cloth lying peacefully at rest on the plane.</strong></p>
+<p>My basic cloth lying peacefully on the ground plane:</p>
+<!-- ![Cloth lying on plane - colored](../img-4/plane-color.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/plane-color.png" width="300" height="300">
+<p>If viewing the above picture isn't easy enough to determine if it's right on the plane or not, this is the wire-framed image:</p>
+<!-- ![Cloth lying on plane - wireframe](../img-4/plane-wireframe.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/plane-wireframe.png" width="300" height="300">
+<h2 id="part-4-handling-self-collisions">Part 4: Handling self-collisions</h2>
+<p><strong>Show us at least 3 screenshots that document how your cloth falls and folds on itself, starting with an early, initial self-collision and ending with the cloth at a more restful state (even if it is still slightly bouncy on the ground).</strong></p>
+<p>Before cloth falls:</p>
+<!-- ![Before fall](../img-4/self-fold-1.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/self-fold-1.png" width="300" height="300">
+<p>Starting to fall. Cloth folds onto itself more at the bottom:</p>
+<!-- ![Alittle self-fold at the bottom](../img-4/self-fold-2.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/self-fold-2.png" width="300" height="300">
+<p>Folds more onto itself and spread a bit on the ground as more cloth falls:</p>
+<!-- ![More self-fold and spread out onto the ground](../img-4/self-fold-3.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/self-fold-3.png" width="300" height="300">
+<p>Entire cloth fall on the ground. You can see that the wavy self-fold at the edge of the cloth:</p>
+<!-- ![Before fall](../img-4/self-fold-4.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/self-fold-4.png" width="300" height="300">
+<p>At resting state, the previous cloth slowly spread out more to cover the ground due to gravity: (rest state is still a bit wavy, but it is spread out more than with low density)</p>
+<!-- ![Before fall](../img-4/self-fold-5.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/self-fold-5.png" width="300" height="300">
+<p>At resting state. The other side of the cloth. Also see the self-fold.</p>
+<!-- ![Before fall](../img-4/self-fold-6.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/self-fold-6.png" width="300" height="300">
+<p><strong>Vary the density as well as ks and describe with words and screenshots how they affect the behavior of the cloth as it falls on itself.</strong></p>
+<p>Low <code>density = 5</code>. The cloth is more folded onto itself and spreads out on the ground less:</p>
+<!-- ![Low density=5 self-fold](../img-4/self-fold-low-density.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/self-fold-low-density.png" width="300" height="300">
+<p>High <code>density = 500</code>. The cloth is less folded onto itself and spreads out on the ground more, as gravity pulls it down more due to its high density:</p>
+<!-- ![High density=500 self-fold](../img-4/self-fold-high-density.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/self-fold-high-density.png" width="300" height="300">
+<p>Low <code>ks = 500</code>. The cloth has more rumpy, scuffle parts. It folds and creases over itself more.</p>
+<!-- ![Low ks=500 self-fold](../img-4/self-fold-low-ks.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/self-fold-low-ks.png" width="300" height="300">
+<p>High <code>ks = 50000</code>. The cloth is MUCH smoother (like silk). It spreads out more and has less mini-folds/rumpy parts on the material.</p>
+<!-- ![High ks=500000 self-fold](../img-4/self-fold-high-ks.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/self-fold-high-ks.png" width="300" height="300">
+<h1 id="part-5-shader">Part 5: Shader</h1>
+<p><strong>Explain in your own words what is a shader program and how vertex and fragment shaders work together to create lighting and material effects.</strong></p>
+<ul>
+<li>Shaders are separate programs running in parallel ini GPU. It executes sections of the graphics pipeline: takes in an input and outputs a 4 dimensional vector.</li>
+<li>Vertex shader apply transforms to vertices, modifying their geometric properties (positions, normal vectors, etc.). The vertex shader's output is the input to fragment shader. (<code>gl_Position</code>)</li>
+<li>Fragment shader takes in geometric properties of each fragments and output colors for that fragment <code>out_color</code>.</li>
+</ul>
+<p><strong>Explain the Blinn-Phong shading model in your own words. Show a screenshot of your Blinn-Phong shader outputting only the ambient component, a screen shot only outputting the diffuse component, a screen shot only outputting the specular component, and one using the entire Blinn-Phong model.</strong></p>
+<p>Only ambient component:</p>
+<!-- ![Sphere covered with cloth ambient](../img-4/phong-ambient.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/phong-ambient.png" width="300" height="300">
+<p>Only diffuse component:</p>
+<!-- ![Sphere covered with cloth diffuse](../img-4/phong-diffuse.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/phong-diffuse.png" width="300" height="300">
+<p>Only specular component:</p>
+<!-- ![Sphere covered with cloth specular](../img-4/phong-specular.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/phong-specular.png" width="300" height="300">
+<p>All 3 components: ambient, diffuse, and specular</p>
+<!-- ![Sphere covered with cloth with all 3 componenets](../img-4/phong-all.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/phong-all.png" width="300" height="300">
+<p><strong>Show a screenshot of your texture mapping shader using your own custom texture by modifying the textures in /textures/</strong></p>
+<p>Using this random texture pic I got on Google:</p>
+<!-- ![Dessert ground cracks texture pic](../img-4/texture-pic.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/texture-pic.png" width="300" height="300">
+<p>I get this cloth and sphere image:</p>
+<!-- ![Cloth and sphere with texture mapping](../img-4/texture.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/texture.png" width="300" height="300">
+<p><strong>Show a screenshot of bump mapping on the cloth and on the sphere. Show a screenshot of displacement mapping on the sphere. Use the same texture for both renders. You can either provide your own texture or use one of the ones in the textures directory, BUT choose one that's not the default texture_2.png. Compare the two approaches and resulting renders in your own words. Compare how your the two shaders react to the sphere by changing the sphere mesh's coarseness by using -o 16 -a 16 and then -o 128 -a 128.</strong></p>
+<p>The following methods use <code>-o 128 -a 128</code> and the dessert ground crack texture map that I used before:</p>
+<p>Bump mapping cloth:</p>
+<!-- ![Bump cloth](../img-4/bump-cloth.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/bump-cloth.png" width="300" height="300">
+<p>Bump mapping sphere:</p>
+<!-- ![Bump sphere](../img-4/bump-sphere.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/bump-cloth.png" width="300" height="300">
+<p>Bump mapping cloth over sphere:</p>
+<!-- ![Bump cloth over sphere](../img-4/bump-clothsphere.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/bump-clothsphere.png" width="300" height="300">
+<p><strong>Show a screenshot of your mirror shader on the cloth and on the sphere.
+Explain what you did in your custom shader, if you made one.</strong></p>
+<p>Mirror shaded over just cloth:</p>
+<!-- ![Cloth mirror shaded](../img-4/mirror-cloth.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/bump-mirror-cloth.png" width="300" height="300">
+<p>Mirror shaded over just sphere:</p>
+<!-- ![Sphere mirror shaded](../img-4/mirror-sphere.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/bump-mirror-sphere.png" width="300" height="300">
+<p>Mirror shaded over clother draped over sphere:</p>
+<!-- ![Cloth and sphere mirror shaded](../img-4/mirror-clothsphere.png) -->
+<img src="file:///Users/EmiBom/Desktop/CS 184/webpages/img-4/bump-mirror-clothsphere.png" width="300" height="300">
+
+</body>
+</html>
