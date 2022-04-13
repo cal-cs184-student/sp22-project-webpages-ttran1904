@@ -1,5 +1,8 @@
 # Project 4: Cloth Sim
 
+NOTE: Please try to look at the `/img-4/` folder on my github webpages repo. It contains all the necessary files. I permenantly have a problem with my webpage repo on loading image on the server, and I have tried many ways (Markdown, HTML, changing configurations, etc.) over all the previous project and didn't work. Please take a look at my /img-4/ folder or git clone the webpage repo to see on Markdown preview on VS Code. Thank you!
+
+
 ## Part 1: Masses and springs
 **Take some screenshots of scene/pinned2.json from a viewing angle where you can clearly see the cloth wireframe to show the structure of your point masses and springs.**
 
