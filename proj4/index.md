@@ -216,12 +216,12 @@ Explain what you did in your custom shader, if you made one.**
 
 Mirror shaded over just cloth:
 <!-- ![Cloth mirror shaded](../img-4/mirror-cloth.png) -->
-<img src="../img-4/bump-mirror-cloth.png" width="300" height="300">
+<img src="../img-4/mirror-cloth.png" width="300" height="300">
 
 Mirror shaded over just sphere:
 <!-- ![Sphere mirror shaded](../img-4/mirror-sphere.png) -->
-<img src="../img-4/bump-mirror-sphere.png" width="300" height="300">
+<img src="../img-4/mirror-sphere.png" width="300" height="300">
 
 Mirror shaded over clother draped over sphere:
 <!-- ![Cloth and sphere mirror shaded](../img-4/mirror-clothsphere.png) -->
-<img src="../img-4/bump-mirror-clothsphere.png" width="300" height="300">
+<img src="../img-4/mirror-clothsphere.png" width="300" height="300">
