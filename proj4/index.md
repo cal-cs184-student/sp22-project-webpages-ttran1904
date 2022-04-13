@@ -119,3 +119,62 @@ Low `ks = 500`. The cloth has more rumpy, scuffle parts. It folds and creases ov
 
 High `ks = 50000`. The cloth is MUCH smoother (like silk). It spreads out more and has less mini-folds/rumpy parts on the material.
 ![High ks=500000 self-fold](/img-4/self-fold-high-ks.png)
+
+
+
+# Part 5: Shader
+**Explain in your own words what is a shader program and how vertex and fragment shaders work together to create lighting and material effects.**
+*   Shaders are separate programs running in parallel ini GPU. It executes sections of the graphics pipeline: takes in an input and outputs a 4 dimensional vector.
+*   Vertex shader apply transforms to vertices, modifying their geometric properties (positions, normal vectors, etc.). The vertex shader's output is the input to fragment shader. (`gl_Position`)
+*   Fragment shader takes in geometric properties of each fragments and output colors for that fragment `out_color`.
+
+
+**Explain the Blinn-Phong shading model in your own words. Show a screenshot of your Blinn-Phong shader outputting only the ambient component, a screen shot only outputting the diffuse component, a screen shot only outputting the specular component, and one using the entire Blinn-Phong model.**
+
+Only ambient component:
+![Sphere covered with cloth ambient](/img-4/phong-ambient.png)
+
+Only diffuse component:
+![Sphere covered with cloth diffuse](/img-4/phong-diffuse.png)
+
+Only specular component:
+![Sphere covered with cloth specular](/img-4/phong-specular.png)
+
+All 3 components: ambient, diffuse, and specular
+![Sphere covered with cloth with all 3 componenets](/img-4/phong-all.png)
+
+**Show a screenshot of your texture mapping shader using your own custom texture by modifying the textures in /textures/**
+
+Using this random texture pic I got on Google:
+![Dessert ground cracks texture pic](/img-4/texture-pic.png)
+
+I get this cloth and sphere image:
+![Cloth and sphere with texture mapping](/img-4/texture.png)
+
+
+
+**Show a screenshot of bump mapping on the cloth and on the sphere. Show a screenshot of displacement mapping on the sphere. Use the same texture for both renders. You can either provide your own texture or use one of the ones in the textures directory, BUT choose one that's not the default texture_2.png. Compare the two approaches and resulting renders in your own words. Compare how your the two shaders react to the sphere by changing the sphere mesh's coarseness by using -o 16 -a 16 and then -o 128 -a 128.**
+
+The following methods use `-o 128 -a 128` and the dessert ground crack texture map that I used before:
+
+Bump mapping cloth:
+![Bump cloth](/img-4/bump-cloth.png)
+
+Bump mapping sphere:
+![Bump sphere](/img-4/bump-sphere.png)
+
+Bump mapping cloth over sphere:
+![Bump cloth over sphere](/img-4/bump-clothsphere.png)
+
+**Show a screenshot of your mirror shader on the cloth and on the sphere.
+Explain what you did in your custom shader, if you made one.**
+
+Mirror shaded over just cloth:
+![Cloth mirror shaded](/img-4/mirror-cloth.png)
+
+Mirror shaded over just sphere:
+![Sphere mirror shaded](/img-4/mirror-sphere.png)
+
+Mirror shaded over clother draped over sphere:
+![Cloth and sphere mirror shaded](/img-4/mirror-clothsphere.png)
+
