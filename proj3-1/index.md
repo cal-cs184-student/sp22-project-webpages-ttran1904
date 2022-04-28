@@ -143,30 +143,53 @@ Indirect lighting function is the same as the normal lighting function but with 
 
 **Show some images rendered with global (direct and indirect) illumination. Use 1024 samples per pixel.**
 
-![Bunny with both Direct and Indirect Illumination](/img-3/bunny-direct-indirect.png)
+<!-- ![Bunny with both Direct and Indirect Illumination](/img-3/bunny-direct-indirect.png) -->
+<img src="../img-3/bunny-direct-indirect.png" height="300">
 
 
 **Pick one scene and compare rendered views first with only direct illumination, then only indirect illumination. Use 1024 samples per pixel.**
-![Bunny with ONLY Direct Illumination](/img-3/bunny_direct.png)
-![Bunny with ONLY Indirect Illumination](/img-3/bunny_indirect.png)
+<!-- ![Bunny with ONLY Direct Illumination](/img-3/bunny_direct.png)
+![Bunny with ONLY Indirect Illumination](/img-3/bunny_indirect.png) -->
+
+<img src="../img-3/bunny_direct.png" height="300">
+<img src="../img-3/bunny_indirect.png" height="300">
+
+_Left: Direct Illumination. Right: Indirect Illumination_
 
 **For CBbunny.dae, compare rendered views with max_ray_depth set to 0, 1, 2, 3, and 100**
-
+<!-- 
 ![Bunny with ray depth 0](/img-3/bunny-d0.png)
 ![Bunny with ray depth 1](/img-3/bunny-d1.png)
 ![Bunny with ray depth 2](/img-3/bunny-d2.png)
 ![Bunny with ray depth 3](/img-3/bunny-d3.png)
-![Bunny with ray depth 100](/img-3/bunny-d100.png)
+![Bunny with ray depth 100](/img-3/bunny-d100.png) -->
+
+<img src="../img-3/bunny-d0.png" height="300">
+<img src="../img-3/bunny-d1.png" height="300">
+<img src="../img-3/bunny-d2.png" height="300">
+<img src="../img-3/bunny-d3.png" height="300">
+<img src="../img-3/bunny-d100.png" height="300">
+
+_(Order: Left to right, top to bottom): Render bunny with `max_ray_depth` as 0, 1, 2, 3, and 100._
 
 **Pick one scene and compare rendered views with various sample-per-pixel rates, including at least 1, 2, 4, 8, 16, 64, and 1024. Use 4 light rays.**
-
-![Bunny with 1 sample/pixel](/img-3/bunny-s1.png)
+<!-- ![Bunny with 1 sample/pixel](/img-3/bunny-s1.png)
 ![Bunny with 2 sample/pixel](/img-3/bunny-s2.png)
 ![Bunny with 4 sample/pixel](/img-3/bunny-s4.png)
 ![Bunny with 8 sample/pixel](/img-3/bunny-s8.png)
 ![Bunny with 16 sample/pixel](/img-3/bunny-s16.png)
 ![Bunny with 64 sample/pixel](/img-3/bunny-s64.png)
-![Bunny with 1024 sample/pixel](/img-3/bunny-s1024.png)
+![Bunny with 1024 sample/pixel](/img-3/bunny-s1024.png) -->
+
+<img src="../img-3/bunny-s1.png" height="300">
+<img src="../img-3/bunny-s2.png" height="300">
+<img src="../img-3/bunny-s4.png" height="300">
+<img src="../img-3/bunny-s8.png" height="300">
+<img src="../img-3/bunny-s16.png" height="300">
+<img src="../img-3/bunny-s64.png" height="300">
+<img src="../img-3/bunny-s1024.png" height="300">
+
+_(Order: Left to right, top to bottom): Render bunny with sample-per-pixel rates as 1, 2, 4, 8, 16, 64 and 1024._
 
 
 ## Part 5: Adaptive Sampling
@@ -184,5 +207,9 @@ The algorithm will look at each pixel and take some n samples to get the mean an
 
 **Pick one scene and render it with at least 2048 samples per pixel. Show a good sampling rate image with clearly visible differences in sampling rate over various regions and pixels. Include both your sample rate image, which shows your how your adaptive sampling changes depending on which part of the image you are rendering, and your noise-free rendered result. Use 1 sample per light and at least 5 for max ray depth.**
 
-![Bunny Adaptive Sampling](/img-3/bunny.png)
-![Bunny Adaptive Sampling Rate](/img-3/bunny_rate.png)
+<!-- ![Bunny Adaptive Sampling](/img-3/bunny.png)
+![Bunny Adaptive Sampling Rate](/img-3/bunny_rate.png) -->
+<img src="../img-3/bunny.png" height="300">
+<img src="../img-3/bunny_rate.png" height="300">
+
+_Left: Bunny with Adaptive Sampling. Right: Adaptive Sampling rate_
