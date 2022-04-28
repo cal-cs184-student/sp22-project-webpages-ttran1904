@@ -28,7 +28,7 @@ And then do the near and far clipping of the planes for this ray later
 I used the Möller–Trumbore algorithm described in the lecture to find if the ray intersect with a primitive/shape.
 
 <!-- ![Möller–Trumbore Equations from Lecture](/img-3/Moller_trumbore.png) -->
-<img src="../img-3/Moller_trumbore.png" width="400" height="400">
+<img src="../img-3/Moller_trumbore.png" height="250">
 
 
 The equations are:
@@ -52,10 +52,10 @@ Some images with normal shading:
 ![Box with Spheres](/img-3/CBspheres.png)
 ![Box with Gems shading](/img-3/BoxGems.png
 ![Box with Bunny shading](/img-3/BoxBunny.png) -->
-<img src="../img-3/EmptyBox.png" width="400" height="400">
-<img src="../img-3/CBspheres.png" width="400" height="400">
-<img src="../img-3/BoxGems.png" width="400" height="400">
-<img src="../img-3/BoxBunny.png" width="400" height="400">
+<img src="../img-3/EmptyBox.png" height="250">
+<img src="../img-3/CBspheres.png" height="250">
+<img src="../img-3/BoxGems.png" height="250">
+<img src="../img-3/BoxBunny.png" height="250">
 
 
 ## Part 2: Bounding Volume Hierarchy
@@ -73,7 +73,7 @@ This is a result of the implementation:
 <!-- ![Max Planck shading](/img-3/maxplanck.png)
 ![CBLucy shading](/img-3/CBlucy.png) -->
 
-<img src="../img-3/BoxBunny.png" width="400" height="400">
+<img src="../img-3/maxplanck.png" width="400" height="400">
 <img src="../img-3/BoxBunny.png" width="400" height="400">
 
 _Left: Max Planck. Right: CBlucy_
@@ -97,8 +97,13 @@ _Left: Max Planck. Right: CBlucy_
     Then we test if that ray hits any object and then use Monte Carlo estimator to sample the radiance at those points on the object.
 
 **Show some images rendered with both implementations of the direct lighting function.**
-![Bunny image using Hemisphere sampling](/img-3/bunny_hemisphere.png)
-![Bunny image using Light sampling](/img-3/bunny_light.png)
+<!-- ![Bunny image using Hemisphere sampling](/img-3/bunny_hemisphere.png)
+![Bunny image using Light sampling](/img-3/bunny_light.png) -->
+
+<img src="../img-3/bunny_hemisphere.png" height="400">
+<img src="../img-3/bunny_light.png" height="400">
+
+_Left: using Hemisphere sampling. Right: using Light sampling_
 
 **Focus on one particular scene with at least one area light and compare the noise levels in soft shadows when rendering with 1, 4, 16, and 64 light rays (the -l flag) and with 1 sample per pixel (the -s flag) using light sampling, not uniform hemisphere sampling.**
 
