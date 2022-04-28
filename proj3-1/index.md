@@ -8,7 +8,7 @@ If the webpage images can't load (sometimes Github.io webpages takes a long time
 A ray equation is `r = o + dt` where `o` is the origin vector and `d` is the ray's direction vector. 
 
 <!-- ![Camera to World Space Diagram](../img-3/c2w.png) -->
-<img src="../img-3/c2w.png" width="500">
+<img src="../img-3/c2w.png" height="600">
 
 
 We start out with a view from the image space. We then want to convert from image space to camera space, which involves mathematics to figure out the image locations within the world relations (3D). Given `hFov` and `vFov` of the camera in degrees the camera space ray's direction will be:
@@ -27,7 +27,9 @@ And then do the near and far clipping of the planes for this ray later
 ### II. Primitive Intersection
 I used the Möller–Trumbore algorithm described in the lecture to find if the ray intersect with a primitive/shape.
 
-![Möller–Trumbore Equations from Lecture](/img-3/Moller_trumbore.png)
+<!-- ![Möller–Trumbore Equations from Lecture](/img-3/Moller_trumbore.png) -->
+<img src="../img-3/Moller_trumbore.png" width="400" height="400">
+
 
 The equations are:
 *   `E1 = P1 - P0`
