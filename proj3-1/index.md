@@ -8,7 +8,7 @@ If the webpage images can't load (sometimes Github.io webpages takes a long time
 A ray equation is `r = o + dt` where `o` is the origin vector and `d` is the ray's direction vector. 
 
 <!-- ![Camera to World Space Diagram](../img-3/c2w.png) -->
-<img src="../img-3/c2w.png" width="250" height="250">
+<img src="../img-3/c2w.png" width="500">
 
 
 We start out with a view from the image space. We then want to convert from image space to camera space, which involves mathematics to figure out the image locations within the world relations (3D). Given `hFov` and `vFov` of the camera in degrees the camera space ray's direction will be:
@@ -50,10 +50,10 @@ Some images with normal shading:
 ![Box with Spheres](/img-3/CBspheres.png)
 ![Box with Gems shading](/img-3/BoxGems.png
 ![Box with Bunny shading](/img-3/BoxBunny.png) -->
-<img src="../img-3/EmptyBox.png" width="250" height="250">
-<img src="../img-3/CBspheres.png" width="250" height="250">
-<img src="../img-3/BoxGems.png" width="250" height="250">
-<img src="../img-3/BoxBunny.png" width="250" height="250">
+<img src="../img-3/EmptyBox.png" width="400" height="400">
+<img src="../img-3/CBspheres.png" width="400" height="400">
+<img src="../img-3/BoxGems.png" width="400" height="400">
+<img src="../img-3/BoxBunny.png" width="400" height="400">
 
 
 ## Part 2: Bounding Volume Hierarchy
@@ -64,15 +64,15 @@ My BVH algorithm is recursive. Basically it will keep partitioning the set of pr
 This is a result of the implementation:
 <!-- ![Cow shading](/img-3/cow.png) -->
 
-<img src="../img-3/cow.png" width="250" height="250">
+<img src="../img-3/cow.png" width="400" height="400">
 
 
 **Show images with normal shading for a few large .dae files that you can only render with BVH acceleration.**
 <!-- ![Max Planck shading](/img-3/maxplanck.png)
 ![CBLucy shading](/img-3/CBlucy.png) -->
 
-<img src="../img-3/BoxBunny.png" width="250" height="250">
-<img src="../img-3/BoxBunny.png" width="250" height="250">
+<img src="../img-3/BoxBunny.png" width="400" height="400">
+<img src="../img-3/BoxBunny.png" width="400" height="400">
 
 _Left: Max Planck. Right: CBlucy_
 
