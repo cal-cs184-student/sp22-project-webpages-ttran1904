@@ -26,8 +26,11 @@ Please view the images in the `/img-3.2/` folder!
 <img src="../img-3.2/spheres_5.png" width="180" height="180">
 <!-- Ray depth 5 -->
 <!-- ![Spheres - max ray depth 100](../img-3.2/spheres_100.png) -->
-<img src="../img-3.2/spheres_6.png" width="180" height="180">
+<img src="../img-3.2/spheres_100.png" width="180" height="180">
 <!-- Ray depth 100 -->
+
+(From left to right, up to down): Spheres at `max_ray_depth` set to 0, 1, 2, 3, 4, 5, and 100.
+
 
 **Point out the new multibounce effects that appear in each image** 
 
