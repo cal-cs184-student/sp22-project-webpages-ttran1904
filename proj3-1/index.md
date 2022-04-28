@@ -52,10 +52,10 @@ Some images with normal shading:
 ![Box with Spheres](/img-3/CBspheres.png)
 ![Box with Gems shading](/img-3/BoxGems.png
 ![Box with Bunny shading](/img-3/BoxBunny.png) -->
-<img src="../img-3/EmptyBox.png" height="250">
-<img src="../img-3/CBspheres.png" height="250">
-<img src="../img-3/BoxGems.png" height="250">
-<img src="../img-3/BoxBunny.png" height="250">
+<img src="../img-3/EmptyBox.png" width="400" height="400">
+<img src="../img-3/CBspheres.png" width="400" height="400">
+<img src="../img-3/BoxGems.png" width="400" height="400">
+<img src="../img-3/BoxBunny.png" width="400" height="400">
 
 
 ## Part 2: Bounding Volume Hierarchy
