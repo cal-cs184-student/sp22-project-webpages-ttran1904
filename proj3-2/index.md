@@ -7,25 +7,25 @@ Please view the images in the `/img-3.2/` folder!
 ## Part 1: Mirror and Glass Materials
 **Show a sequence of six images of scene `CBspheres.dae` rendered with `max_ray_depth` set to 0, 1, 2, 3, 4, 5, and 100.**
 <!-- ![Spheres - max ray depth 0](../img-3.2/spheres_0.png) -->
-<img src=".../img-3.2/spheres_0.png" width="150" height="150">
+<img src="../img-3.2/spheres_0.png" width="150" height="150">
 Ray depth 0
 <!-- ![Spheres - max ray depth 1](../img-3.2/spheres_1.png) -->
-<img src=".../img-3.2/spheres_1.png" width="150" height="150">
+<img src="../img-3.2/spheres_1.png" width="150" height="150">
 Ray depth 1
 <!-- ![Spheres - max ray depth 2](../img-3.2/spheres_2.png) -->
-<img src=".../img-3.2/spheres_2.png" width="150" height="150">
+<img src="../img-3.2/spheres_2.png" width="150" height="150">
 Ray depth 2
 <!-- ![Spheres - max ray depth 3](../img-3.2/spheres_3.png) -->
-<img src=".../img-3.2/spheres_3.png" width="150" height="150">
+<img src="../img-3.2/spheres_3.png" width="150" height="150">
 Ray depth 3
 <!-- ![Spheres - max ray depth 4](../img-3.2/spheres_4.png) -->
-<img src=".../img-3.2/spheres_4.png" width="150" height="150">
+<img src="../img-3.2/spheres_4.png" width="150" height="150">
 Ray depth 4
 <!-- ![Spheres - max ray depth 5](../img-3.2/spheres_5.png) -->
-<img src=".../img-3.2/spheres_5.png" width="150" height="150">
+<img src="../img-3.2/spheres_5.png" width="150" height="150">
 Ray depth 5
 <!-- ![Spheres - max ray depth 100](../img-3.2/spheres_100.png) -->
-<img src=".../img-3.2/spheres_6.png" width="150" height="150">
+<img src="../img-3.2/spheres_6.png" width="150" height="150">
 Ray depth 100
 
 **Point out the new multibounce effects that appear in each image** 
