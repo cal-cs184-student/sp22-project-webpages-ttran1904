@@ -47,11 +47,11 @@ Images above are ordered based on maximum ray depth: (64 samples per pixel and 4
 Environment lighting represents source that is "infinitely" far away, such as in the real-world where we have light source that are much further from the object then the light source in the enclosed room/box that we see in the previous part. How it works is that the light from each direction is defined by a texture map parameterized by phi and theta.
 
 <!-- ![Environment Light](../img-3.2/envirolight.png) -->
-<img src="../img-3.2/envirolight.png" width="200" height="200">
+<img src="../img-3.2/envirolight.png" width="250" height="250">
 <!-- Environment light example figure from the project spec
 I am using the Field background, shown below: -->
 <!-- ![Grace Background](../img-3.2/field.png) -->
-<img src="../img-3.2/field.png" width="200" height="200">
+<img src="../img-3.2/field.png" width="250" height="250">
 
 _Figure 2: Left - How light from each direction is defined by texture map (phi and theta). Right - Field/grace background._
 
