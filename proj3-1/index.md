@@ -100,8 +100,8 @@ _Left: Max Planck. Right: CBlucy_
 <!-- ![Bunny image using Hemisphere sampling](/img-3/bunny_hemisphere.png)
 ![Bunny image using Light sampling](/img-3/bunny_light.png) -->
 
-<img src="../img-3/bunny_hemisphere.png" height="400">
-<img src="../img-3/bunny_light.png" height="400">
+<img src="../img-3/bunny_hemisphere.png" height="300">
+<img src="../img-3/bunny_light.png" height="300">
 
 _Left: using Hemisphere sampling. Right: using Light sampling_
 
@@ -112,10 +112,10 @@ _Left: using Hemisphere sampling. Right: using Light sampling_
 ![Sphere - 16 lighting sample](/img-3/sphere_16.png)
 ![Sphere - 64 lighting sample](/img-3/sphere_64.png) -->
 
-<img src="../img-3/sphere_1.png" height="250">
-<img src="../img-3/sphere_4.png" height="250">
-<img src="../img-3/sphere_16.png" height="250">
-<img src="../img-3/sphere_64.png" height="250">
+<img src="../img-3/sphere_1.png" height="300">
+<img src="../img-3/sphere_4.png" height="300">
+<img src="../img-3/sphere_16.png" height="300">
+<img src="../img-3/sphere_64.png" height="300">
 
 _(Order: Left-right, up-down): Light sampling with 1, 4, 16, and 64 light rays_
 
@@ -126,10 +126,10 @@ Comparing with Hemisphere lighting with samples: 1, 4, 16, 64:
 ![Sphere - 16 hemisphere sample](/img-3/sphereH_16.png)
 ![Sphere - 64 hemisphere sample](/img-3/sphereH_64.png) -->
 
-<img src="../img-3/sphereH_1.png.png" height="250">
-<img src="../img-3/sphereH_4.png.png" height="250">
-<img src="../img-3/sphereH_16.png.png" height="250">
-<img src="../img-3/sphereH_64.png.png" height="250">
+<img src="../img-3/sphereH_1.png.png" height="300">
+<img src="../img-3/sphereH_4.png.png" height="300">
+<img src="../img-3/sphereH_16.png.png" height="300">
+<img src="../img-3/sphereH_64.png.png" height="300">
 
 _(Order: Left-right, up-down): Hemisphere sampling with 1, 4, 16, and 64 light rays_
 
