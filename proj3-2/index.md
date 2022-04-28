@@ -58,18 +58,18 @@ _Figure 2: Left - How light from each direction is defined by texture map (phi a
 
 **Show the `probability_debug.png` file for the .exr file you are using, generated using the save_probability_debug() helper function after initializing your probability distributions.**
 
-<img src="../img-3.2/probability_debug.png" width="200" height="200">
+<img src="../img-3.2/probability_debug.png" width="250" height="250">
 <!-- ![probability_debug.png file](../img-3.2/probability_debug.png) -->
 
 _Figure 3: Probability debug file._
 
 **Use the `bunny_unlit.dae` scene and your environment map `.exr` file and render two pictures, one with uniform sampling and one with importance sampling. Use 4 samples per pixel and 64 samples per light in each. Compare noise levels.**
 
-<img src="../img-3.2/bunny_unlit_hemisphere.png" width="180" height="180">
+<img src="../img-3.2/bunny_unlit_hemisphere.png" width="250" height="250">
 <!-- ![bunny_unlit - Uniform Sampling](../img-3.2/bunny_unlit_hemisphere.png) -->
 <!-- With Importance sampling: -->
 <!-- ![bunny_unlit - Importance sampling](../img-3.2/bunny_unlit_importance.png) -->
-<img src="../img-3.2/bunny_unlit_importance.png" width="180" height="180">
+<img src="../img-3.2/bunny_unlit_importance.png" width="250" height="250">
 
 _Figure 4: Left - Uniform sampling. Right - Importance sampling._
 
