@@ -6,27 +6,28 @@ Please view the images in the `/img-3.2/` folder!
 
 ## Part 1: Mirror and Glass Materials
 **Show a sequence of six images of scene `CBspheres.dae` rendered with `max_ray_depth` set to 0, 1, 2, 3, 4, 5, and 100.**
+
 <!-- ![Spheres - max ray depth 0](../img-3.2/spheres_0.png) -->
-<img src="../img-3.2/spheres_0.png" width="150" height="150">
-Ray depth 0
+<img src="../img-3.2/spheres_0.png" width="180" height="180">
+<!-- Ray depth 0 -->
 <!-- ![Spheres - max ray depth 1](../img-3.2/spheres_1.png) -->
-<img src="../img-3.2/spheres_1.png" width="150" height="150">
-Ray depth 1
+<img src="../img-3.2/spheres_1.png" width="180" height="180">
+<!-- Ray depth 1 -->
 <!-- ![Spheres - max ray depth 2](../img-3.2/spheres_2.png) -->
-<img src="../img-3.2/spheres_2.png" width="150" height="150">
-Ray depth 2
+<img src="../img-3.2/spheres_2.png" width="180" height="180">
+<!-- Ray depth 2 -->
 <!-- ![Spheres - max ray depth 3](../img-3.2/spheres_3.png) -->
-<img src="../img-3.2/spheres_3.png" width="150" height="150">
-Ray depth 3
+<img src="../img-3.2/spheres_3.png" width="180" height="180">
+<!-- Ray depth 3 -->
 <!-- ![Spheres - max ray depth 4](../img-3.2/spheres_4.png) -->
-<img src="../img-3.2/spheres_4.png" width="150" height="150">
-Ray depth 4
+<img src="../img-3.2/spheres_4.png" width="180" height="180">
+<!-- Ray depth 4 -->
 <!-- ![Spheres - max ray depth 5](../img-3.2/spheres_5.png) -->
-<img src="../img-3.2/spheres_5.png" width="150" height="150">
-Ray depth 5
+<img src="../img-3.2/spheres_5.png" width="180" height="180">
+<!-- Ray depth 5 -->
 <!-- ![Spheres - max ray depth 100](../img-3.2/spheres_100.png) -->
-<img src="../img-3.2/spheres_6.png" width="150" height="150">
-Ray depth 100
+<img src="../img-3.2/spheres_6.png" width="180" height="180">
+<!-- Ray depth 100 -->
 
 **Point out the new multibounce effects that appear in each image** 
 
@@ -46,16 +47,20 @@ Images above are ordered based on maximum ray depth: (64 samples per pixel and 4
 **In a few sentences, explain the ideas behind environment lighting (i.e. why we do it/how it works).**
 Environment lighting represents source that is "infinitely" far away, such as in the real-world where we have light source that are much further from the object then the light source in the enclosed room/box that we see in the previous part. How it works is that the light from each direction is defined by a texture map parameterized by phi and theta.
 
-![Environment Light](../img-3.2/envirolight.png)
+<!-- ![Environment Light](../img-3.2/envirolight.png) -->
+<img src="../img-3.2/envirolight.png" width="180" height="180">
+
 Environment light example figure from the project spec
 
 I am using the Field background, shown below:
 
-![Grace Background](../img-3.2/field.png)
+<!-- ![Grace Background](../img-3.2/field.png) -->
+<img src="../img-3.2/field.png" width="180" height="180">
 
 **Show the `probability_debug.png` file for the .exr file you are using, generated using the save_probability_debug() helper function after initializing your probability distributions.**
 
-![probability_debug.png file](../img-3.2/probability_debug.png)
+<img src="../img-3.2/probability_debug.png" width="180" height="180">
+<!-- ![probability_debug.png file](../img-3.2/probability_debug.png) -->
 
 
 
@@ -63,11 +68,16 @@ I am using the Field background, shown below:
 
 With Uniform sampling (from staff/provided skeleton code)
 
-![bunny_unlit - Uniform Sampling](../img-3.2/bunny_unlit_hemisphere.png)
+<img src="../img-3.2/bunny_unlit_hemisphere.png" width="180" height="180">
+
+<!-- ![bunny_unlit - Uniform Sampling](../img-3.2/bunny_unlit_hemisphere.png) -->
 
 With Importance sampling:
 
-![bunny_unlit - Importance sampling](../img-3.2/bunny_unlit_importance.png)
+<!-- ![bunny_unlit - Importance sampling](../img-3.2/bunny_unlit_importance.png) -->
+<img src="../img-3.2/bunny_unlit_importance.png" width="180" height="180">
+
+
 
 Importance sampling has a clearer image. It has more noise or freckles on the bunny, as seen obviously on the lighter areas of the uniform sampling image.
 
@@ -79,11 +89,15 @@ I did Part 2 (but only want to get graded on Part 1. The code works), so I will 
 Using `-l 256 -s 4 -t 8 -m 7`:
 *   With Uniform Sampling:
 
-![cu_bunny with uniform sampling](../img-3.2/cu_bunny_uniform.png)
+<!-- ![cu_bunny with uniform sampling](../img-3.2/cu_bunny_uniform.png) -->
+<img src="../img-3.2/cu_bunny_uniform.png" width="180" height="180">
+
 
 *   With Importance Sampling:
 
-![cu_bunny with importance sampling](../img-3.2/cu_bunny_importance.png)
+<!-- ![cu_bunny with importance sampling](../img-3.2/cu_bunny_importance.png) -->
+<img src="../img-3.2/cu_bunny_importance.png" width="180" height="180">
+
 
 The importance sampling is less noisy. It has clearer image of the lobe of the right ear, tail, and front paw of the bunny.
 
