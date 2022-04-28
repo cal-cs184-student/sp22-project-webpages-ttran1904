@@ -2,6 +2,8 @@
 
 Note: I have fixed the image problem by by using a different configuration. The original staff skeleton code didn't work for me, and I tried many other webpage GitHub setup. Now, I found away to load it up!! :)
 
+I also resize the new images to fit the webpage and but description under them (copy & pasting the same content I wrote in the Alt Text of the previous images)
+
 ## Part 1: Mirror and Glass Materials
 **Show a sequence of six images of scene `CBspheres.dae` rendered with `max_ray_depth` set to 0, 1, 2, 3, 4, 5, and 100.**
 
@@ -27,14 +29,10 @@ Note: I have fixed the image problem by by using a different configuration. The 
 <img src="../img-3.2/spheres_100.png" width="180" height="180">
 <!-- Ray depth 100 -->
 
-(From left to right, up to down): Spheres at `max_ray_depth` set to 0, 1, 2, 3, 4, 5, and 100.
+_Figure 1: (order from left to right, up to down): Spheres at `max_ray_depth` set to 0, 1, 2, 3, 4, 5, and 100._
 
 
-**Point out the new multibounce effects that appear in each image** 
-
-also explains the question:
-
-**Explain how these bounce numbers relate to the particular effects that appear.**
+**Point out the new multibounce effects that appear in each image. Explain how these bounce numbers relate to the particular effects that appear.**
 
 Images above are ordered based on maximum ray depth: (64 samples per pixel and 4 samples per light)
 *   `0`: No object has received light on its surface. Therefore, pitch black except for the light source.
@@ -49,35 +47,31 @@ Images above are ordered based on maximum ray depth: (64 samples per pixel and 4
 Environment lighting represents source that is "infinitely" far away, such as in the real-world where we have light source that are much further from the object then the light source in the enclosed room/box that we see in the previous part. How it works is that the light from each direction is defined by a texture map parameterized by phi and theta.
 
 <!-- ![Environment Light](../img-3.2/envirolight.png) -->
-<img src="../img-3.2/envirolight.png" width="180" height="180">
-
-Environment light example figure from the project spec
-
-I am using the Field background, shown below:
-
+<img src="../img-3.2/envirolight.png" width="200" height="200">
+<!-- Environment light example figure from the project spec
+I am using the Field background, shown below: -->
 <!-- ![Grace Background](../img-3.2/field.png) -->
-<img src="../img-3.2/field.png" width="180" height="180">
+<img src="../img-3.2/field.png" width="200" height="200">
+
+_Figure 2: Left - How light from each direction is defined by texture map (phi and theta). Right - Field/grace background._
+
 
 **Show the `probability_debug.png` file for the .exr file you are using, generated using the save_probability_debug() helper function after initializing your probability distributions.**
 
-<img src="../img-3.2/probability_debug.png" width="180" height="180">
+<img src="../img-3.2/probability_debug.png" width="200" height="200">
 <!-- ![probability_debug.png file](../img-3.2/probability_debug.png) -->
 
-
+_Figure 3: Probability debug file._
 
 **Use the `bunny_unlit.dae` scene and your environment map `.exr` file and render two pictures, one with uniform sampling and one with importance sampling. Use 4 samples per pixel and 64 samples per light in each. Compare noise levels.**
 
-With Uniform sampling (from staff/provided skeleton code)
-
 <img src="../img-3.2/bunny_unlit_hemisphere.png" width="180" height="180">
-
 <!-- ![bunny_unlit - Uniform Sampling](../img-3.2/bunny_unlit_hemisphere.png) -->
-
-With Importance sampling:
-
+<!-- With Importance sampling: -->
 <!-- ![bunny_unlit - Importance sampling](../img-3.2/bunny_unlit_importance.png) -->
 <img src="../img-3.2/bunny_unlit_importance.png" width="180" height="180">
 
+_Figure 4: Left - Uniform sampling. Right - Importance sampling._
 
 
 Importance sampling has a clearer image. It has more noise or freckles on the bunny, as seen obviously on the lighter areas of the uniform sampling image.
