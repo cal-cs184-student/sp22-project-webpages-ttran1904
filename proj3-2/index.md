@@ -1,8 +1,6 @@
 # Project 3-2
 
-Images won't load on the webpages. I tried for my past projects too. HTML, Markdown, convert to PDF, only some few simples ones would work. The rest of them is too heavy to be up in the server.
-
-Please view the images in the `/img-3.2/` folder!
+Note: I have fixed the image problem by by using a different configuration. The original staff skeleton code didn't work for me, and I tried many other webpage GitHub setup. Now, I found away to load it up!! :)
 
 ## Part 1: Mirror and Glass Materials
 **Show a sequence of six images of scene `CBspheres.dae` rendered with `max_ray_depth` set to 0, 1, 2, 3, 4, 5, and 100.**
