@@ -8,25 +8,25 @@ I also resize the new images to fit the webpage and but description under them (
 **Show a sequence of six images of scene `CBspheres.dae` rendered with `max_ray_depth` set to 0, 1, 2, 3, 4, 5, and 100.**
 
 <!-- ![Spheres - max ray depth 0](../img-3.2/spheres_0.png) -->
-<img src="../img-3.2/spheres_0.png" width="180" height="180">
+<img src="../img-3.2/spheres_0.png" width="300" height="300">
 <!-- Ray depth 0 -->
 <!-- ![Spheres - max ray depth 1](../img-3.2/spheres_1.png) -->
-<img src="../img-3.2/spheres_1.png" width="180" height="180">
+<img src="../img-3.2/spheres_1.png" width="300" height="300">
 <!-- Ray depth 1 -->
 <!-- ![Spheres - max ray depth 2](../img-3.2/spheres_2.png) -->
-<img src="../img-3.2/spheres_2.png" width="180" height="180">
+<img src="../img-3.2/spheres_2.png" width="300" height="300">
 <!-- Ray depth 2 -->
 <!-- ![Spheres - max ray depth 3](../img-3.2/spheres_3.png) -->
-<img src="../img-3.2/spheres_3.png" width="180" height="180">
+<img src="../img-3.2/spheres_3.png" width="300" height="300">
 <!-- Ray depth 3 -->
 <!-- ![Spheres - max ray depth 4](../img-3.2/spheres_4.png) -->
-<img src="../img-3.2/spheres_4.png" width="180" height="180">
+<img src="../img-3.2/spheres_4.png" width="300" height="300">
 <!-- Ray depth 4 -->
 <!-- ![Spheres - max ray depth 5](../img-3.2/spheres_5.png) -->
-<img src="../img-3.2/spheres_5.png" width="180" height="180">
+<img src="../img-3.2/spheres_5.png" width="300" height="300">
 <!-- Ray depth 5 -->
 <!-- ![Spheres - max ray depth 100](../img-3.2/spheres_100.png) -->
-<img src="../img-3.2/spheres_100.png" width="180" height="180">
+<img src="../img-3.2/spheres_100.png" width="300" height="300">
 <!-- Ray depth 100 -->
 
 _Figure 1: (order from left to right, up to down): Spheres at `max_ray_depth` set to 0, 1, 2, 3, 4, 5, and 100._
@@ -47,29 +47,29 @@ Images above are ordered based on maximum ray depth: (64 samples per pixel and 4
 Environment lighting represents source that is "infinitely" far away, such as in the real-world where we have light source that are much further from the object then the light source in the enclosed room/box that we see in the previous part. How it works is that the light from each direction is defined by a texture map parameterized by phi and theta.
 
 <!-- ![Environment Light](../img-3.2/envirolight.png) -->
-<img src="../img-3.2/envirolight.png" width="250" height="250">
+<img src="../img-3.2/envirolight.png" width="300" height="300">
 <!-- Environment light example figure from the project spec
 I am using the Field background, shown below: -->
 <!-- ![Grace Background](../img-3.2/field.png) -->
-<img src="../img-3.2/field.png" width="250" height="250">
+<img src="../img-3.2/field.png" width="300" height="300">
 
 _Figure 2: Left - How light from each direction is defined by texture map (phi and theta). Right - Field/grace background._
 
 
 **Show the `probability_debug.png` file for the .exr file you are using, generated using the save_probability_debug() helper function after initializing your probability distributions.**
 
-<img src="../img-3.2/probability_debug.png" width="250" height="250">
+<img src="../img-3.2/probability_debug.png" width="300" height="300">
 <!-- ![probability_debug.png file](../img-3.2/probability_debug.png) -->
 
 _Figure 3: Probability debug file._
 
 **Use the `bunny_unlit.dae` scene and your environment map `.exr` file and render two pictures, one with uniform sampling and one with importance sampling. Use 4 samples per pixel and 64 samples per light in each. Compare noise levels.**
 
-<img src="../img-3.2/bunny_unlit_hemisphere.png" width="250" height="250">
+<img src="../img-3.2/bunny_unlit_hemisphere.png" width="300" height="300">
 <!-- ![bunny_unlit - Uniform Sampling](../img-3.2/bunny_unlit_hemisphere.png) -->
 <!-- With Importance sampling: -->
 <!-- ![bunny_unlit - Importance sampling](../img-3.2/bunny_unlit_importance.png) -->
-<img src="../img-3.2/bunny_unlit_importance.png" width="250" height="250">
+<img src="../img-3.2/bunny_unlit_importance.png" width="300" height="300">
 
 _Figure 4: Left - Uniform sampling. Right - Importance sampling._
 
@@ -85,13 +85,13 @@ Using `-l 256 -s 4 -t 8 -m 7`:
 *   With Uniform Sampling:
 
 <!-- ![cu_bunny with uniform sampling](../img-3.2/cu_bunny_uniform.png) -->
-<img src="../img-3.2/cu_bunny_uniform.png" width="180" height="180">
+<img src="../img-3.2/cu_bunny_uniform.png" width="300" height="300">
 
 
 *   With Importance Sampling:
 
 <!-- ![cu_bunny with importance sampling](../img-3.2/cu_bunny_importance.png) -->
-<img src="../img-3.2/cu_bunny_importance.png" width="180" height="180">
+<img src="../img-3.2/cu_bunny_importance.png" width="300" height="300">
 
 
 The importance sampling is less noisy. It has clearer image of the lobe of the right ear, tail, and front paw of the bunny.
