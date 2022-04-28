@@ -107,18 +107,31 @@ _Left: using Hemisphere sampling. Right: using Light sampling_
 
 **Focus on one particular scene with at least one area light and compare the noise levels in soft shadows when rendering with 1, 4, 16, and 64 light rays (the -l flag) and with 1 sample per pixel (the -s flag) using light sampling, not uniform hemisphere sampling.**
 
-![Sphere - 1 lighting sample](/img-3/sphere_1.png)
+<!-- ![Sphere - 1 lighting sample](/img-3/sphere_1.png)
 ![Sphere - 4 lighting sample](/img-3/sphere_4.png)
 ![Sphere - 16 lighting sample](/img-3/sphere_16.png)
-![Sphere - 64 lighting sample](/img-3/sphere_64.png)
+![Sphere - 64 lighting sample](/img-3/sphere_64.png) -->
+
+<img src="../img-3/sphere_1.png" height="400">
+<img src="../img-3/sphere_4.png" height="400">
+<img src="../img-3/sphere_16.png" height="400">
+<img src="../img-3/sphere_64.png" height="400">
+
+_(Order: Left-right, up-down): Light sampling with 1, 4, 16, and 64 light rays_
 
 **Compare the results between uniform hemisphere sampling and lighting sampling in a one-paragraph analysis.**
 Comparing with Hemisphere lighting with samples: 1, 4, 16, 64:
-
-![Sphere - 1 hemisphere sample](/img-3/sphereH_1.png)
+<!-- ![Sphere - 1 hemisphere sample](/img-3/sphereH_1.png)
 ![Sphere - 4 hemisphere sample](/img-3/sphereH_4.png)
 ![Sphere - 16 hemisphere sample](/img-3/sphereH_16.png)
-![Sphere - 64 hemisphere sample](/img-3/sphereH_64.png)
+![Sphere - 64 hemisphere sample](/img-3/sphereH_64.png) -->
+
+<img src="../img-3/sphereH_1.png.png" height="400">
+<img src="../img-3/sphereH_4.png.png" height="400">
+<img src="../img-3/sphereH_16.png.png" height="400">
+<img src="../img-3/sphereH_64.png.png" height="400">
+
+_(Order: Left-right, up-down): Hemisphere sampling with 1, 4, 16, and 64 light rays_
 
 From the images, light sampling is better than Hemisphere sampling. I has lower number of rays required to reach a good resolution image and it does a smoother, less noisy job of capturing the image (less background noise/black specks).
 
