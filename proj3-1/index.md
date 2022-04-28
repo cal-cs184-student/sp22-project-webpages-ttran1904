@@ -7,7 +7,9 @@ If the webpage images can't load (sometimes Github.io webpages takes a long time
 ### I. Ray generation
 A ray equation is `r = o + dt` where `o` is the origin vector and `d` is the ray's direction vector. 
 
-![Camera to World Space Diagram](/img-3/c2w.png)
+<!-- ![Camera to World Space Diagram](../img-3/c2w.png) -->
+<img src="../img-3/c2w.png" width="250" height="250">
+
 
 We start out with a view from the image space. We then want to convert from image space to camera space, which involves mathematics to figure out the image locations within the world relations (3D). Given `hFov` and `vFov` of the camera in degrees the camera space ray's direction will be:
 
@@ -44,13 +46,14 @@ After calculating `t, b1, b2,` and `b3 = 1 -b1-b2`, my last step is to check if 
 
 Some images with normal shading:
 
-![Empty box shading](/img-3/EmptyBox.png)
-
+<!-- ![Empty box shading](/img-3/EmptyBox.png)
 ![Box with Spheres](/img-3/CBspheres.png)
-
-![Box with Gems shading](/img-3/BoxGems.png)
-
-![Box with Bunny shading](/img-3/BoxBunny.png)
+![Box with Gems shading](/img-3/BoxGems.png
+![Box with Bunny shading](/img-3/BoxBunny.png) -->
+<img src="../img-3/EmptyBox.png" width="250" height="250">
+<img src="../img-3/CBspheres.png" width="250" height="250">
+<img src="../img-3/BoxGems.png" width="250" height="250">
+<img src="../img-3/BoxBunny.png" width="250" height="250">
 
 
 ## Part 2: Bounding Volume Hierarchy
@@ -59,12 +62,19 @@ Some images with normal shading:
 My BVH algorithm is recursive. Basically it will keep partitioning the set of primitives until the current `num_primities < max_leaf_size`. The heuristics I use is median primitive, as recommended in the Implementation Note. I use that to partition the current level to the left and right sets of primitives.  
 
 This is a result of the implementation:
-![Cow shading](/img-3/cow.png)
+<!-- ![Cow shading](/img-3/cow.png) -->
+
+<img src="../img-3/cow.png" width="250" height="250">
+
 
 **Show images with normal shading for a few large .dae files that you can only render with BVH acceleration.**
-![Max Planck shading](/img-3/maxplanck.png)
+<!-- ![Max Planck shading](/img-3/maxplanck.png)
+![CBLucy shading](/img-3/CBlucy.png) -->
 
-![CBLucy shading](/img-3/CBlucy.png)
+<img src="../img-3/BoxBunny.png" width="250" height="250">
+<img src="../img-3/BoxBunny.png" width="250" height="250">
+
+_Left: Max Planck. Right: CBlucy_
 
 
 **Compare rendering times on a few scenes with moderately complex geometries with and without BVH acceleration. Present your results in a one-paragraph analysis.**
